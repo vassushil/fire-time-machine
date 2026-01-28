@@ -2,9 +2,13 @@ import numpy as np
 import json
 import os
 import pickle
+from pathlib import Path
 
 class FireEngine:
-    def __init__(self, params_path='data/market_params.json'):
+    BASE_DIR = Path(__file__).parent
+    DATA_PATH = BASE_DIR / "data" / "market_params.json"
+
+    def __init__(self, params_path=DATA_PATH):
         with open(params_path, 'r') as f:
             self.market = json.load(f)
 
