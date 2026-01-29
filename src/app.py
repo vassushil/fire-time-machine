@@ -42,7 +42,7 @@ st.markdown("""
 
 # --- SIDEBAR: PRIMARY INPUTS ---
 with st.sidebar:
-    st.header("👤 Personal Details")
+    st.header("👤 Age Factor")
     current_age = st.number_input("How old are you today?", min_value=18, max_value=70, value=30)
     sim_years = st.slider("Years to simulate", 10, 60, 40, help="Total timeline including your work and retirement years.")
     
